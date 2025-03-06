@@ -6,6 +6,7 @@ This API was developed as a practice project by Santiago Celestre, using Hexagon
 It serves as an experiment in designing and testing a structured API while working with SQLite as a lightweight embedded database.
 
  Key Features
+ 
 ✅ Hexagonal Architecture → Clean and scalable design for maintainable code.
 
 ✅ Stock Evolution Tracking → Detects major events in eBay’s stock history.
