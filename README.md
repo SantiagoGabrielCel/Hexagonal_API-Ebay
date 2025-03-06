@@ -2,6 +2,7 @@
  A practice project using Hexagonal Architecture with SQLite and data from Kaggle!
 
 About the Project
+
 This API was developed as a practice project by Santiago Celestre, using Hexagonal Architecture and data extracted from Kaggle.
 It serves as an experiment in designing and testing a structured API while working with SQLite as a lightweight embedded database.
 
