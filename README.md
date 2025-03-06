@@ -7,6 +7,9 @@ It serves as an experiment in designing and testing a structured API while worki
 
  Key Features
 ✅ Hexagonal Architecture → Clean and scalable design for maintainable code.
+
 ✅ Stock Evolution Tracking → Detects major events in eBay’s stock history.
+
 ✅ Historical Event Analysis → Associates price changes with real-world events.
+
 ✅ JSON and Excel Reports → Supports structured data output for easy analysis.
