@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "Api_EbayStocks.Controllers.EbayStockController",
+    "Method": "ObtenerTodosLosStocks",
+    "RelativePath": "api/EbayStock",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_EbayStocks.Controllers.EbayStockController",
+    "Method": "GenerarInformeTendencias",
+    "RelativePath": "api/EbayStock/informe-tendencias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_EbayStocks.Controllers.EbayStockController",
+    "Method": "GenerarInformeVolumen",
+    "RelativePath": "api/EbayStock/informe-volumen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_EbayStocks.Controllers.EbayStockController",
+    "Method": "ObtenerMapaEvolutivoJson",
+    "RelativePath": "api/EbayStock/mapa-evolutivo-json",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
