@@ -11,7 +11,12 @@ namespace Api_EbayStocks.data.Infraestructura
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var dbPath = Path.Combine(AppContext.BaseDirectory, "ebay.db");
+
+            Console.WriteLine($"[DEBUG] Ruta esperada de DB: {dbPath}");
+            Console.WriteLine($"[DEBUG] ¿Existe el archivo? {File.Exists(dbPath)}");
+
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
