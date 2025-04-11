@@ -2,10 +2,11 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /source
 
-COPY Api_EbayStocks.csproj .
+# RUTA CORREGIDA ⬇️
+COPY Api_EbayStocks/Api_EbayStocks.csproj .
 RUN dotnet restore
 
-COPY . .
+COPY Api_EbayStocks/. .
 RUN dotnet publish -c Release -o /app/publish
 
 # Etapa 2: runtime
