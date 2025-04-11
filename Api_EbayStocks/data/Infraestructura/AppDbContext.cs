@@ -15,7 +15,7 @@ namespace Api_EbayStocks.data.Infraestructura
             var files = Directory.GetFiles(baseDir);
             var rootFiles = Directory.GetFiles("/app");
 
-            var dbPath = Path.Combine(baseDir, "ebay.db");
+            var dbPath = Path.Combine(baseDir, "Ebay.db");
 
             Console.WriteLine("========== DEBUG DB PATH INFO ==========");
             Console.WriteLine($"[BASE DIR]         AppContext.BaseDirectory: {baseDir}");
