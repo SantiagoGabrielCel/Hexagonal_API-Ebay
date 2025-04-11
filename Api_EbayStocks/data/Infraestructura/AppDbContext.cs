@@ -15,6 +15,9 @@ namespace Api_EbayStocks.data.Infraestructura
             Console.WriteLine($"[DEBUG] Ruta esperada de DB: {dbPath}");
             Console.WriteLine($"[DEBUG] ¿Existe el archivo? {File.Exists(dbPath)}");
 
+            if (!File.Exists(dbPath))
+                throw new FileNotFoundException("La base de datos no se encuentra donde se espera.");
+
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
 
         }
