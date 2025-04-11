@@ -10,16 +10,33 @@ namespace Api_EbayStocks.data.Infraestructura
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var dbPath = Path.Combine(AppContext.BaseDirectory, "ebay.db");
+            var baseDir = AppContext.BaseDirectory;
+            var currentDir = Directory.GetCurrentDirectory();
+            var files = Directory.GetFiles(baseDir);
+            var rootFiles = Directory.GetFiles("/app");
 
-            Console.WriteLine($"[DEBUG] Ruta esperada de DB: {dbPath}");
-            Console.WriteLine($"[DEBUG] ¿Existe el archivo? {File.Exists(dbPath)}");
+            var dbPath = Path.Combine(baseDir, "ebay.db");
+
+            Console.WriteLine("========== DEBUG DB PATH INFO ==========");
+            Console.WriteLine($"[BASE DIR]         AppContext.BaseDirectory: {baseDir}");
+            Console.WriteLine($"[CURRENT DIR]      Directory.GetCurrentDirectory(): {currentDir}");
+            Console.WriteLine($"[DB PATH]          Ruta esperada de DB: {dbPath}");
+            Console.WriteLine($"[EXISTS]           ¿Existe el archivo? {File.Exists(dbPath)}");
+
+            Console.WriteLine("\n[ARCHIVOS en BASE DIR]:");
+            foreach (var f in files)
+                Console.WriteLine($"  -> {f}");
+
+            Console.WriteLine("\n[ARCHIVOS en /app]:");
+            foreach (var f in rootFiles)
+                Console.WriteLine($"  -> {f}");
+
+            Console.WriteLine("========================================");
 
             if (!File.Exists(dbPath))
                 throw new FileNotFoundException("La base de datos no se encuentra donde se espera.");
 
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
-
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
