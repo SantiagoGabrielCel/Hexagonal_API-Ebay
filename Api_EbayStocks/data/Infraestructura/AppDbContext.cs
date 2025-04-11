@@ -10,7 +10,8 @@ namespace Api_EbayStocks.data.Infraestructura
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=data/Infraestructura/ebay.db");
+            var dbPath = Path.Combine(AppContext.BaseDirectory, "ebay.db");
+            optionsBuilder.UseSqlite($"Data Source={dbPath}");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
