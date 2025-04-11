@@ -17,6 +17,7 @@
 <ItemGroup>
   <Content Include="Ebay.db">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <CopyToPublishDirectory>Always</CopyToPublishDirectory> <!-- 🔥 esto es la clave -->
   </Content>
 </ItemGroup>
 
