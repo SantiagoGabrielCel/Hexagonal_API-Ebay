@@ -18,3 +18,4 @@ ENV ASPNETCORE_URLS=http://+:10000
 EXPOSE 10000
 
 ENTRYPOINT ["dotnet", "Api_EbayStocks.dll"]
+
